@@ -3,7 +3,7 @@ const express =require('express');
 const app= express();
 const cors = require ('cors');
 const {Client} = require ('pg');
-const config = require ('.config.js')[process.env.NODE_ENV || 'dev']
+const config = require ('./config.js')[process.env.NODE_ENV || 'dev']
 
 const PORT = config.port 
 
@@ -19,6 +19,9 @@ app.use(express.json());
 
 //set up routes 
 
+app.get('/', (req,res)=>{
+    res.send("Welcome to Workout Circuit Warrior")
+});
 
 
 

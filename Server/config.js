@@ -1,6 +1,6 @@
 module.exports = {
     dev: {
-        connectionString:"postgresql://postgres:docker@127.0.0.1:542/circuit_workouts_db",
+        connectionString:"postgresql://postgres:docker@127.0.0.1:5432/circuit_workouts_db",
         port:'3000'
     },
     production: {
