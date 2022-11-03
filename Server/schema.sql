@@ -6,7 +6,7 @@ CREATE TABLE workouts (
     description varchar(500), 
     type varchar (255), 
     equipment varchar (255), 
-    reps varchar (255),
+    reps varchar (255)
 );
 
 INSERT INTO workouts (name, description, type, equipment, reps)
@@ -27,4 +27,4 @@ VALUES
     ('KB squats', 'hold kettle bell to your chest and execute squat in good form', 'lower body', 'kettle bell', '15 reps'),
     ('box jumps', 'using a box or solid elevated surface from standing position jump on to the box landing softely and with good form and then softely jump back to the ground for one rep.','lower body', 'box', '20 reps'),
     ('KB swings', 'holding kettle bell with both hands between your legs, use your hips and arms to thrust the kettle bell up to eye level and return in a controlled swing back to between your legs', 'full body', 'kettle bell', '15 reps'),
-    ('bent over rows',)
+    ('bent over rows','with knees slightly bent tilt at the hips using dumbbells or kettle bells in both hands and arms straight with a slight bend at the elbow bring weights to side of the body and then return.','upper body', 'kettle bell', '15 reps');
