@@ -16,3 +16,35 @@
     font-size:400;
     text-shadow: 3px 3px black;
 }
+
+#workoutsContainer{
+    display:flex;
+    margin: auto;
+    border: 2px solid black;
+    width: fit-content;
+    display: table-row; 
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.circuitWorkout{
+    display:flex;
+    font-size: 20pt;
+    width:max-content;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-evenly;
+    margin:10px 10px;
+    padding: 10px 10px;
+}
+
+.workoutDetails{
+    text-indent: 20px;
+    word-spacing: 2px;
+
+}
+
+button{
+    margin: 5px 5px; 
+}
