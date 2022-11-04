@@ -17,6 +17,19 @@
     text-shadow: 3px 3px black;
 }
 
+.linkContainer{
+    display:flex;
+    margin: auto;
+    padding: 10px 10px;
+    justify-content: center;
+}
+
+a{
+    font-size: 20px;
+    padding: 10px 10px;
+    margin: 5px;
+}
+
 #workoutsContainer{
     display:flex;
     margin: auto;

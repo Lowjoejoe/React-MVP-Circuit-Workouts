@@ -3,6 +3,7 @@ import '../styles.css';
 import Header from './Header';
 import SelectedCircuitWorkouts from './SelectedCircuitWorkouts';
 import Workouts from './Workouts';
+import { Routes, Route, Link} from 'react-router-dom';
 
 function App() {
 const [workouts, setWorkouts]=useState([]);
@@ -51,11 +52,18 @@ useEffect(()=>{
 
 console.log("selectedWorkouts:", selectedWorkouts);
   return (
-    <div className="App">
-      <Header/>
-      <Workouts workouts={workouts} onWorkoutAdd={onWorkoutAdd} />
-      <SelectedCircuitWorkouts selectedWorkouts={selectedWorkouts} onWorkoutRemove={onWorkoutRemove}/>
-    </div>
+        <div className="App">
+          <Header/>
+            <div className="linkContainer">
+                <Link to='/'> Home </Link>
+                <Link to='/selectedWorkout'> Selected Workout </Link>
+            </div>
+            <Routes>
+                <Route path='/' element={<Workouts workouts={workouts} onWorkoutAdd={onWorkoutAdd} />}/>
+                <Route path='/selectedWorkout' element={<SelectedCircuitWorkouts selectedWorkouts={selectedWorkouts} onWorkoutRemove={onWorkoutRemove}/>}/>
+            </Routes>
+            </div>
+  
   );
 }
 
