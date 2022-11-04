@@ -15,8 +15,19 @@ const onWorkoutAdd = (addedWorkout)=>{
 }
 
 
-const onWorkoutRemove = (selectedWorkoutsArr, removeWorkout)=>{
+const onWorkoutRemove = (id)=>{
+  let adjustedArray = [...selectedWorkouts];
+  let arrOfIds = adjustedArray.map(workout=>{
+    return workout.id; 
+  })
+  // console.log("arrofIds", arrOfIds);
 
+  var index = arrOfIds.indexOf(id)
+  // console.log("index:", index);
+  if(index !== -1) {
+    adjustedArray.splice(index,1);
+    setSelectedWorkouts(adjustedArray);
+  }
 }
 
 console.log("selected workouts:", selectedWorkouts);
@@ -28,32 +39,22 @@ function fetchWorkouts() {
     .then((data)=>{
 
       setWorkouts(data)
-console.log("data from fetch:",workouts);
+// console.log("data from fetch:",workouts);
       
     })
 }
 
 useEffect(()=>{
   fetchWorkouts()
-  console.log('useEffect:', workouts);
+  // console.log('useEffect:', workouts);
 },[])
 
-
-// function toggleWorkoutDetails() {
-//   var details = document.querySelector(".workoutDetails");
-//   if(details.style.display === 'none'){
-//     details.style.display = 'block';
-//   }else {
-//     details.style.display = 'none';
-//   }
-// }
-
- 
+console.log("selectedWorkouts:", selectedWorkouts);
   return (
     <div className="App">
       <Header/>
       <Workouts workouts={workouts} onWorkoutAdd={onWorkoutAdd} />
-      <SelectedCircuitWorkouts selectedWorkouts={selectedWorkouts}/>
+      <SelectedCircuitWorkouts selectedWorkouts={selectedWorkouts} onWorkoutRemove={onWorkoutRemove}/>
     </div>
   );
 }

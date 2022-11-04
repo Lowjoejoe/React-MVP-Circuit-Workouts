@@ -1,35 +1,22 @@
-import React from 'react';
+import React, {useState} from "react";
 
 
-const SelectedCircuitWorkouts=({selectedWorkouts})=>{
+const SelectedCircuitWorkouts = ({ selectedWorkouts, onWorkoutRemove }) => {
+//   console.log("SCW", selectedWorkouts);
     return (
-       <div id='selectedWorkoutsContainer'>
-        Workout Selection
-        {selectedWorkouts.map(selectedWorkout=>{
-            return ( 
-            <div className='selectedWorkout'
-            key={selectedWorkout.id}
-            > 
-            {selectedWorkout.name}
-            <button>Remove</button>
-              </div>
-            )
-        })}
+    <div id="selectedWorkoutsContainer">
+      Workout Selection
+      {selectedWorkouts.map((selectedWorkout) => {
+        //   console.log('selectedWorkout:', selectedWorkout.id);
+        return (
+          <div className="selectedWorkout" key={selectedWorkout.id}>
+            {selectedWorkout.name.toUpperCase()}
+            <button onClick={()=> onWorkoutRemove(selectedWorkout.id)}>Remove</button>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
 
-       </div>
-    )
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-export default SelectedCircuitWorkouts; 
+export default SelectedCircuitWorkouts;
