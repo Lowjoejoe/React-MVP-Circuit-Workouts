@@ -1,13 +1,17 @@
-import react from 'react';
+import react, {useState} from 'react';
 import WorkoutDetails from './WorkoutDetails';
 
-
+//workouts passes single workout here from map at workouts.js
 const CircuitWorkout = ({workouts, onWorkoutAdd}) =>{
+    const [isClicked, setIsClicked] = useState(true);
+
     return (
-    <div className='circuitWorkout'key={workouts.id}>
+    <div className='circuitWorkout'key={workouts.id} >
+    
         {workouts.name.toUpperCase()} 
+        <button onClick={()=> setIsClicked(!isClicked)}>Toggle Details</button>
         <button onClick={()=> onWorkoutAdd(workouts)}>Add workout to circuit</button> 
-        <WorkoutDetails workouts={workouts}/>
+        {isClicked && <WorkoutDetails workouts={workouts}/>}
     </div>
     )
 };

@@ -3,6 +3,7 @@ import CircuitWorkout from './CircuitWorkout';
 
 
 const Workouts = ({workouts, onWorkoutAdd})=>{
+  
     return(
         <div id='workoutsContainer'>
             {workouts.map(workout=>{
@@ -10,6 +11,7 @@ const Workouts = ({workouts, onWorkoutAdd})=>{
                 key={workout.id}
                 workouts={workout}
                 onWorkoutAdd={onWorkoutAdd}
+               
                 />
             })}
         </div>

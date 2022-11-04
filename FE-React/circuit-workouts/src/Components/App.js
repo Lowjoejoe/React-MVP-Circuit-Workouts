@@ -14,6 +14,11 @@ const onWorkoutAdd = (addedWorkout)=>{
   setSelectedWorkouts([...selectedWorkouts, addedWorkout])
 }
 
+
+const onWorkoutRemove = (selectedWorkoutsArr, removeWorkout)=>{
+
+}
+
 console.log("selected workouts:", selectedWorkouts);
 
 // defines function for fetching workouts which makes a fetch call to local API and pulls in all workouts and pushes them into workouts state array. 
@@ -34,10 +39,20 @@ useEffect(()=>{
 },[])
 
 
+// function toggleWorkoutDetails() {
+//   var details = document.querySelector(".workoutDetails");
+//   if(details.style.display === 'none'){
+//     details.style.display = 'block';
+//   }else {
+//     details.style.display = 'none';
+//   }
+// }
+
+ 
   return (
     <div className="App">
       <Header/>
-      <Workouts workouts={workouts} onWorkoutAdd={onWorkoutAdd}/>
+      <Workouts workouts={workouts} onWorkoutAdd={onWorkoutAdd} />
       <SelectedCircuitWorkouts selectedWorkouts={selectedWorkouts}/>
     </div>
   );

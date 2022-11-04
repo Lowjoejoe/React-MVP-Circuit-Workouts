@@ -3,8 +3,10 @@ import React from 'react'
 const WorkoutDetails=({workouts})=>{
     return (
         <div className='workoutDetails'key={workouts.name}>
-           {workouts.description} {workouts.type} {workouts.equipment} {workouts.reps}
-           
+           <li>Description: {workouts.description} </li>
+           <li>Muscle Group Targeted: {workouts.type} </li>
+           <li>Equipment Needed: {workouts.equipment} </li>  
+           <li>Recommended Reps: {workouts.reps} </li>
         </div>
     )
 };
