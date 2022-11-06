@@ -1,11 +1,10 @@
 import React from 'react'
 
 
-//not used having issues with async timing and populating selectedWorkouts properties 
 const SelectedWorkoutDetails=({selectedWorkout})=>{
     // console.log("SWD", selectedWorkouts)
     return (
-        <div className='SelectedWorkoutDetails'key={selectedWorkout.name}>
+        <div className='selectedWorkoutDetails'key={selectedWorkout.name}>
            <li>Description: {selectedWorkout.description} </li>
            <li>Muscle Group Targeted: {selectedWorkout.type} </li>
            <li>Equipment Needed: {selectedWorkout.equipment} </li>  
