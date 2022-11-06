@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-
+import SelectedWorkoutDetails from "./SelectedWorkoutDetails";
 
 const SelectedCircuitWorkouts = ({ selectedWorkouts, onWorkoutRemove }) => {
 //   console.log("SCW", selectedWorkouts);
@@ -10,7 +10,9 @@ const SelectedCircuitWorkouts = ({ selectedWorkouts, onWorkoutRemove }) => {
         //   console.log('selectedWorkout:', selectedWorkout.id);
         return (
           <div className="selectedWorkout" key={selectedWorkout.id}>
-            {selectedWorkout.name.toUpperCase()}
+            {selectedWorkout.name.toUpperCase()} 
+            <SelectedWorkoutDetails selectedWorkout={selectedWorkout}/>
+          
             <button onClick={()=> onWorkoutRemove(selectedWorkout.id)}>Remove</button>
           </div>
         );
