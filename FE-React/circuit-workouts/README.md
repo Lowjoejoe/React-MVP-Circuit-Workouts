@@ -1,10 +1,17 @@
-# Getting Started with Create React App
+Workout Circuit Warrior 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Gives its user the ability to search through a growing library of circuit based workouts and build custom circuit list for their next circuit based workout. 
 
-## Available Scripts
+To get the app up and you will need to navigate into the "Server" folder and execute 
 
-In the project directory, you can run:
+### `npm start`
+
+Runs the backend and database.\
+Open [http://localhost:3002](http://localhost:3002) to view it in your browser.
+The page will reload when you make changes.\
+
+
+You will then need to navigate into the "FE-React/circuit-workouts" folder and execute
 
 ### `npm start`
 
@@ -12,59 +19,38 @@ Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+Once the app is up and running the user will be able to navigate between the Home, Selected Workout and Add New Workout pages. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+HOME PAGE 
+/Homepage.png 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+*From the Home page the user will be able to see a container listing all available workouts to choose from. 
+*The user is able to scroll through these options and able to toggle the exercises details and able to select to add specific workouts to their selected workout list. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Once the user has selected their workouts, they can navigate to the Selected workouts to view their choices. 
 
-### `npm run eject`
+SELECTED WORKOUT PAGE
+/Selected Workouts.png
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The selected workout page provides the user with a container to view all selected exercises with their details. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+*If a user decides that they don't want to have an exercise on their list anymore they are able to remove them by pressing the remove button. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+ADD NEW WORKOUT 
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+is still in progress, but once feature is completed, users will be able to add new workouts to the circuit workout database providing all users with more selection to choose from 
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+POSSIBLE FUTURE FEATURES
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+*Add new workouts to the home page 
+*Populate random workout list giving users ability to select how many circuits they would like to complete
+*Allow user to filter through exercises by muscle group type and by equipment needed
+*
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

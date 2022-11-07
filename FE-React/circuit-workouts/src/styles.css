@@ -129,7 +129,8 @@ a{
 button{
     margin: 5px 5px;
     font-size: 20px; 
-    background-color: aliceblue;
+    color: white;
+    background-color: rgba(240, 248, 255, 0.397);
 }
 
 button:hover{
