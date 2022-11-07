@@ -16,6 +16,8 @@ const onWorkoutAdd = (addedWorkout)=>{
   setSelectedWorkouts([...selectedWorkouts, addedWorkout])
 }
 
+//  sets adjusted array = to a shallow copy of the selectedWorkouts
+// maps an array of all the ids of each workout
 
 const onWorkoutRemove = (id)=>{
   let adjustedArray = [...selectedWorkouts];
@@ -24,8 +26,11 @@ const onWorkoutRemove = (id)=>{
   })
   // console.log("arrofIds", arrOfIds);
 
+  //set index equal to the index of the workout selected to be removed
   var index = arrOfIds.indexOf(id)
   // console.log("index:", index);
+  //if index is present in the selected array it will remove it from the adjustedArray
+  // and then reset state of selectedWorkouts to that of the adjustedArray
   if(index !== -1) {
     adjustedArray.splice(index,1);
     setSelectedWorkouts(adjustedArray);

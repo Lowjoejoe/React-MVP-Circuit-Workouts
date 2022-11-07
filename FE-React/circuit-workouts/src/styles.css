@@ -1,3 +1,5 @@
+
+
 body{
     background-image: url('https://media.gq.com/photos/5e73953620f79700088ed229/master/pass/empty3.jpg');
     background-position: center center;
@@ -131,7 +133,7 @@ button{
 }
 
 button:hover{
-    cursor:pointer;
+    cursor: pointer;
     background-color:black;
     color:whitesmoke;
 }
