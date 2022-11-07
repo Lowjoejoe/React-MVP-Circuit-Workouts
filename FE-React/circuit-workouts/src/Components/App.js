@@ -5,6 +5,9 @@ import SelectedCircuitWorkouts from './SelectedCircuitWorkouts';
 import Workouts from './Workouts';
 import { Routes, Route, Link} from 'react-router-dom';
 import AddWorkout from './AddWorkout';
+import {FaHome} from 'react-icons/fa';
+import {GoDiffAdded} from 'react-icons/go';
+import {BsCardChecklist} from 'react-icons/bs';
 
 function App() {
 const [workouts, setWorkouts]=useState([]);
@@ -61,9 +64,9 @@ console.log("selectedWorkouts:", selectedWorkouts);
         <div className="App">
           <Header/>
             <div className="linkContainer">
-                <Link to='/'> Home </Link>
-                <Link to='/selectedWorkout'> Selected Workout </Link>
-                <Link to='/addNewWorkout'>Add New Workout</Link>
+                <Link to='/'> Home <FaHome/> </Link>
+                <Link to='/selectedWorkout'> Selected Workout <BsCardChecklist /> </Link>
+                <Link to='/addNewWorkout'>Add New Workout <GoDiffAdded/> </Link>
             </div>
             <Routes>
                 <Route path='/' element={<Workouts workouts={workouts} onWorkoutAdd={onWorkoutAdd} />}/>

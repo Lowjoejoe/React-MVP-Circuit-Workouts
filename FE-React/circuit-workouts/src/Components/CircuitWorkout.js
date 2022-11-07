@@ -2,6 +2,7 @@ import react, {useState} from 'react';
 import WorkoutDetails from './WorkoutDetails';
 
 //workouts passes single workout here from map at workouts.js
+//isClicked state by default is set to true and make <WorkoutDetails to render on if isClicked is true
 const CircuitWorkout = ({workouts, onWorkoutAdd}) =>{
     const [isClicked, setIsClicked] = useState(true);
 
