@@ -49,7 +49,7 @@ a{
     margin: 5px;
 }
 
-#workoutsContainer, #selectedWorkoutsContainer{
+#workoutsContainer, #selectedWorkoutsContainer, #workoutToBeAddedContainer{
     display:flex;
     margin: auto;
     background-color:rgba(0, 0, 0, 0.714);

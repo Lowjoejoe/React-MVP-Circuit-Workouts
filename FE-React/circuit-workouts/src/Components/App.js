@@ -4,6 +4,7 @@ import Header from './Header';
 import SelectedCircuitWorkouts from './SelectedCircuitWorkouts';
 import Workouts from './Workouts';
 import { Routes, Route, Link} from 'react-router-dom';
+import AddWorkout from './AddWorkout';
 
 function App() {
 const [workouts, setWorkouts]=useState([]);
@@ -57,10 +58,12 @@ console.log("selectedWorkouts:", selectedWorkouts);
             <div className="linkContainer">
                 <Link to='/'> Home </Link>
                 <Link to='/selectedWorkout'> Selected Workout </Link>
+                <Link to='/addNewWorkout'>Add New Workout</Link>
             </div>
             <Routes>
                 <Route path='/' element={<Workouts workouts={workouts} onWorkoutAdd={onWorkoutAdd} />}/>
                 <Route path='/selectedWorkout' element={<SelectedCircuitWorkouts selectedWorkouts={selectedWorkouts} onWorkoutRemove={onWorkoutRemove}/>}/>
+                <Route path='/addNewWorkout' element ={<AddWorkout />} />
             </Routes>
             </div>
   
