@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import SelectedWorkoutDetails from "./SelectedWorkoutDetails";
+import {AiFillDelete} from "react-icons/ai";
 
 const SelectedCircuitWorkouts = ({ selectedWorkouts, onWorkoutRemove }) => {
 //   console.log("SCW", selectedWorkouts);
@@ -13,7 +14,7 @@ const SelectedCircuitWorkouts = ({ selectedWorkouts, onWorkoutRemove }) => {
             {selectedWorkout.name.toUpperCase()} 
             <SelectedWorkoutDetails selectedWorkout={selectedWorkout}/>
           
-            <button onClick={()=> onWorkoutRemove(selectedWorkout.id)}>Remove</button>
+            <button className="deleteButton" onClick={()=> onWorkoutRemove(selectedWorkout.id)}><AiFillDelete/></button>
           </div>
         );
       })}

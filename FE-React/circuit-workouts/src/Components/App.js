@@ -8,6 +8,8 @@ import AddWorkout from './AddWorkout';
 import {FaHome} from 'react-icons/fa';
 import {GoDiffAdded} from 'react-icons/go';
 import {BsCardChecklist} from 'react-icons/bs';
+import {AiFillDelete} from 'react-icons/ai';
+import DeleteWorkout from './DeleteWorkout';
 
 function App() {
 const [workouts, setWorkouts]=useState([]);
@@ -67,11 +69,13 @@ console.log("selectedWorkouts:", selectedWorkouts);
                 <Link to='/'> Home <FaHome/> </Link>
                 <Link to='/selectedWorkout'> Selected Workout <BsCardChecklist /> </Link>
                 <Link to='/addNewWorkout'>Add New Workout <GoDiffAdded/> </Link>
+                <Link to='/deleteWorkout'>Delete Workout <AiFillDelete/> </Link>
             </div>
             <Routes>
                 <Route path='/' element={<Workouts workouts={workouts} onWorkoutAdd={onWorkoutAdd} />}/>
                 <Route path='/selectedWorkout' element={<SelectedCircuitWorkouts selectedWorkouts={selectedWorkouts} onWorkoutRemove={onWorkoutRemove}/>}/>
-                <Route path='/addNewWorkout' element ={<AddWorkout />} />
+                <Route path='/addNewWorkout' element ={<AddWorkout />  } />
+                <Route path='/deleteWorkout' element ={<DeleteWorkout/>  } />
             </Routes>
             </div>
   

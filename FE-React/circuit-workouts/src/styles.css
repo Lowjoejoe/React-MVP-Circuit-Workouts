@@ -51,7 +51,7 @@ a{
     margin: 5px;
 }
 
-#workoutsContainer, #selectedWorkoutsContainer, #workoutToBeAddedContainer{
+#workoutsContainer, #selectedWorkoutsContainer, #workoutToBeAddedContainer, #workoutToBeDeletedContainer{
     display:flex;
     margin: auto;
     background-color:rgba(0, 0, 0, 0.714);
@@ -137,4 +137,8 @@ button:hover{
     cursor: pointer;
     background-color:black;
     color:whitesmoke;
+}
+
+.deleteButton{
+  size:40px;
 }
