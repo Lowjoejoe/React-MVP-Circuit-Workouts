@@ -1,15 +1,16 @@
 import React, {useState, useEffect} from 'react';
 import '../styles.css';
-import Header from './Header';
-import SelectedCircuitWorkouts from './SelectedCircuitWorkouts';
-import Workouts from './Workouts';
 import { Routes, Route, Link} from 'react-router-dom';
+import Header from './Header';
+import Workouts from './Workouts';
+import AboutUs from './AboutUs';
+import SelectedCircuitWorkouts from './SelectedCircuitWorkouts';
 import AddWorkout from './AddWorkout';
+import DeleteWorkout from './DeleteWorkout';
 import {FaHome} from 'react-icons/fa';
 import {GoDiffAdded} from 'react-icons/go';
 import {BsCardChecklist} from 'react-icons/bs';
 import {AiFillDelete} from 'react-icons/ai';
-import DeleteWorkout from './DeleteWorkout';
 
 function App() {
 const [workouts, setWorkouts]=useState([]);
@@ -72,7 +73,13 @@ console.log("selectedWorkouts:", selectedWorkouts);
                 <Link to='/deleteWorkout'>Delete Workout <AiFillDelete/> </Link>
             </div>
             <Routes>
-                <Route path='/' element={<Workouts workouts={workouts} onWorkoutAdd={onWorkoutAdd} />}/>
+                <Route path='/' element={
+                  <>
+                  <Workouts workouts={workouts} onWorkoutAdd={onWorkoutAdd} />
+                  <AboutUs/>
+                  </>
+                  }
+                  />
                 <Route path='/selectedWorkout' element={<SelectedCircuitWorkouts selectedWorkouts={selectedWorkouts} onWorkoutRemove={onWorkoutRemove}/>}/>
                 <Route path='/addNewWorkout' element ={<AddWorkout />  } />
                 <Route path='/deleteWorkout' element ={<DeleteWorkout/>  } />

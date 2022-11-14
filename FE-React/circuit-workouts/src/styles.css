@@ -142,3 +142,20 @@ button:hover{
 .deleteButton{
   size:40px;
 }
+
+.AboutUs{
+  display:flex;
+    margin: auto;
+    background-color:rgba(0, 0, 0, 0.714);
+    color: white;
+    font-size: 40px;
+    border: 2px solid black;
+    max-width: 900px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+color: white;
+}
